@@ -1,0 +1,210 @@
+vagrant@precise32:~/cheftask$ sudo chef-client --local-mode --runlist 'recipe[testwebapp::create_jbosscookbook]'
+[2015-09-29T14:22:41+00:00] INFO: Started chef-zero at chefzero://localhost:8889 with repository at /home/vagrant/cheftask
+  One version per cookbook
+
+[2015-09-29T14:22:41+00:00] INFO: Forking chef instance to converge...
+Starting Chef Client, version 12.4.3
+[2015-09-29T14:22:41+00:00] INFO: *** Chef 12.4.3 ***
+[2015-09-29T14:22:41+00:00] INFO: Chef-client pid: 4185
+Creating a new client identity for vagrant using the validator key.
+[2015-09-29T14:22:48+00:00] INFO: Client key /home/vagrant/.chef/vagrant.pem is not present - registering
+[2015-09-29T14:22:48+00:00] INFO: HTTP Request Returned 404 Not Found: Object not found: chefzero://localhost:8889/nodes/vagrant
+[2015-09-29T14:22:48+00:00] INFO: Setting the run_list to [#<Chef::RunList::RunListItem:0x966a554 @version=nil, @type=:recipe, @name="testwebapp::create_jbosscookbook">] from CLI options
+[2015-09-29T14:22:48+00:00] INFO: Run List is [recipe[testwebapp::create_jbosscookbook]]
+[2015-09-29T14:22:48+00:00] INFO: Run List expands to [testwebapp::create_jbosscookbook]
+[2015-09-29T14:22:48+00:00] INFO: Starting Chef Run for vagrant
+[2015-09-29T14:22:48+00:00] INFO: Running start handlers
+[2015-09-29T14:22:48+00:00] INFO: Start handlers complete.
+[2015-09-29T14:22:48+00:00] INFO: HTTP Request Returned 404 Not Found: Object not found: 
+resolving cookbooks for run list: ["testwebapp::create_jbosscookbook"]
+[2015-09-29T14:22:49+00:00] INFO: Loading cookbooks [testwebapp@0.1.0]
+Synchronizing Cookbooks:
+[2015-09-29T14:22:49+00:00] INFO: Storing updated cookbooks/testwebapp/templates/default/stop.rb.erb in the cache.
+[2015-09-29T14:22:49+00:00] INFO: Storing updated cookbooks/testwebapp/recipes/configure_jbos.rb in the cache.
+[2015-09-29T14:22:49+00:00] INFO: Storing updated cookbooks/testwebapp/templates/default/install.rb.erb in the cache.
+[2015-09-29T14:22:49+00:00] INFO: Storing updated cookbooks/testwebapp/recipes/deploy_webapp.rb in the cache.
+[2015-09-29T14:22:49+00:00] INFO: Storing updated cookbooks/testwebapp/attributes/default.rb in the cache.
+[2015-09-29T14:22:49+00:00] INFO: Storing updated cookbooks/testwebapp/recipes/install_jbos.rb in the cache.
+[2015-09-29T14:22:49+00:00] INFO: Storing updated cookbooks/testwebapp/recipes/create_jbosscookbook.rb in the cache.
+[2015-09-29T14:22:49+00:00] INFO: Storing updated cookbooks/testwebapp/recipes/default.rb in the cache.
+[2015-09-29T14:22:49+00:00] INFO: Storing updated cookbooks/testwebapp/templates/default/start.rb.erb in the cache.
+[2015-09-29T14:22:49+00:00] INFO: Storing updated cookbooks/testwebapp/templates/default/restart.rb.erb in the cache.
+[2015-09-29T14:22:49+00:00] INFO: Storing updated cookbooks/testwebapp/templates/default/default.rb.erb in the cache.
+[2015-09-29T14:22:49+00:00] INFO: Storing updated cookbooks/testwebapp/templates/default/setup.rb.erb in the cache.
+[2015-09-29T14:22:49+00:00] INFO: Storing updated cookbooks/testwebapp/templates/default/reload.rb.erb in the cache.
+[2015-09-29T14:22:49+00:00] INFO: Storing updated cookbooks/testwebapp/chefignore in the cache.
+[2015-09-29T14:22:49+00:00] INFO: Storing updated cookbooks/testwebapp/metadata.rb in the cache.
+[2015-09-29T14:22:49+00:00] INFO: Storing updated cookbooks/testwebapp/README.md in the cache.
+  - testwebapp
+Compiling Cookbooks...
+Converging 7 resources
+Recipe: testwebapp::create_jbosscookbook
+  * template[/home/vagrant/cheftask/cookbooks/jboss/recipes/start.rb] action create[2015-09-29T14:22:53+00:00] INFO: Processing template[/home/vagrant/cheftask/cookbooks/jboss/recipes/start.rb] action create (testwebapp::create_jbosscookbook line 9)
+[2015-09-29T14:22:53+00:00] INFO: template[/home/vagrant/cheftask/cookbooks/jboss/recipes/start.rb] created file /home/vagrant/cheftask/cookbooks/jboss/recipes/start.rb
+
+    - create new file /home/vagrant/cheftask/cookbooks/jboss/recipes/start.rb[2015-09-29T14:22:53+00:00] INFO: template[/home/vagrant/cheftask/cookbooks/jboss/recipes/start.rb] updated file contents /home/vagrant/cheftask/cookbooks/jboss/recipes/start.rb
+
+    - update content in file /home/vagrant/cheftask/cookbooks/jboss/recipes/start.rb from none to e912eb
+    --- /home/vagrant/cheftask/cookbooks/jboss/recipes/start.rb	2015-09-29 14:22:53.778875337 +0000
+    +++ /tmp/chef-rendered-template20150929-4185-1l0g9v8	2015-09-29 14:22:53.778875337 +0000
+    @@ -1 +1,12 @@
+    +#
+    +# Cookbook Name:: jboss
+    +# Recipe:: start
+    +#
+    +# Copyright (c) 2015 The Authors, All Rights Reserved.
+    +
+    +
+    +execute 'jboss_start' do
+    +  command 'sudo /usr/share/jboss-as-7.1.1.Final/bin/standalone.sh >dev/null 2>&1 &'
+    +end
+    +
+  * template[/home/vagrant/cheftask/cookbooks/jboss/recipes/stop.rb] action create[2015-09-29T14:22:54+00:00] INFO: Processing template[/home/vagrant/cheftask/cookbooks/jboss/recipes/stop.rb] action create (testwebapp::create_jbosscookbook line 13)
+[2015-09-29T14:22:54+00:00] INFO: template[/home/vagrant/cheftask/cookbooks/jboss/recipes/stop.rb] created file /home/vagrant/cheftask/cookbooks/jboss/recipes/stop.rb
+
+    - create new file /home/vagrant/cheftask/cookbooks/jboss/recipes/stop.rb[2015-09-29T14:22:54+00:00] INFO: template[/home/vagrant/cheftask/cookbooks/jboss/recipes/stop.rb] updated file contents /home/vagrant/cheftask/cookbooks/jboss/recipes/stop.rb
+
+    - update content in file /home/vagrant/cheftask/cookbooks/jboss/recipes/stop.rb from none to 979021
+    --- /home/vagrant/cheftask/cookbooks/jboss/recipes/stop.rb	2015-09-29 14:22:54.042766256 +0000
+    +++ /tmp/chef-rendered-template20150929-4185-y30h9c	2015-09-29 14:22:54.034769564 +0000
+    @@ -1 +1,14 @@
+    +#
+    +# Cookbook Name:: jboss
+    +# Recipe:: stop
+    +#
+    +# Copyright (c) 2015 The Authors, All Rights Reserved
+    +
+    +
+    +
+    +
+    +execute 'jboss_stop' do
+    +  command 'sudo /usr/share/jboss-as-7.1.1.Final/bin/jboss-cli.sh --connect command=:shutdown >dev/null 2>&1 &'
+    +end
+    +
+  * template[/home/vagrant/cheftask/cookbooks/jboss/recipes/restart.rb] action create[2015-09-29T14:22:54+00:00] INFO: Processing template[/home/vagrant/cheftask/cookbooks/jboss/recipes/restart.rb] action create (testwebapp::create_jbosscookbook line 17)
+[2015-09-29T14:22:54+00:00] INFO: template[/home/vagrant/cheftask/cookbooks/jboss/recipes/restart.rb] created file /home/vagrant/cheftask/cookbooks/jboss/recipes/restart.rb
+
+    - create new file /home/vagrant/cheftask/cookbooks/jboss/recipes/restart.rb[2015-09-29T14:22:54+00:00] INFO: template[/home/vagrant/cheftask/cookbooks/jboss/recipes/restart.rb] updated file contents /home/vagrant/cheftask/cookbooks/jboss/recipes/restart.rb
+
+    - update content in file /home/vagrant/cheftask/cookbooks/jboss/recipes/restart.rb from none to c5a86a
+    --- /home/vagrant/cheftask/cookbooks/jboss/recipes/restart.rb	2015-09-29 14:22:54.162716648 +0000
+    +++ /tmp/chef-rendered-template20150929-4185-1t5fkfk	2015-09-29 14:22:54.154719955 +0000
+    @@ -1 +1,11 @@
+    +#
+    +# Cookbook Name:: jboss
+    +# Recipe:: restart
+    +#
+    +# Copyright (c) 2015 The Authors, All Rights Reserved.
+    +
+    +
+    +include_recipe 'jboss::stop'
+    +include_recipe 'jboss::start'
+    +
+  * template[/home/vagrant/cheftask/cookbooks/jboss/recipes/reload.rb] action create[2015-09-29T14:22:54+00:00] INFO: Processing template[/home/vagrant/cheftask/cookbooks/jboss/recipes/reload.rb] action create (testwebapp::create_jbosscookbook line 21)
+[2015-09-29T14:22:54+00:00] INFO: template[/home/vagrant/cheftask/cookbooks/jboss/recipes/reload.rb] created file /home/vagrant/cheftask/cookbooks/jboss/recipes/reload.rb
+
+    - create new file /home/vagrant/cheftask/cookbooks/jboss/recipes/reload.rb[2015-09-29T14:22:54+00:00] INFO: template[/home/vagrant/cheftask/cookbooks/jboss/recipes/reload.rb] updated file contents /home/vagrant/cheftask/cookbooks/jboss/recipes/reload.rb
+
+    - update content in file /home/vagrant/cheftask/cookbooks/jboss/recipes/reload.rb from none to 8880d7
+    --- /home/vagrant/cheftask/cookbooks/jboss/recipes/reload.rb	2015-09-29 14:22:54.222691843 +0000
+    +++ /tmp/chef-rendered-template20150929-4185-misidb	2015-09-29 14:22:54.222691843 +0000
+    @@ -1 +1,15 @@
+    +#
+    +# Cookbook Name:: jboss
+    +# Recipe:: reload
+    +#
+    +# Copyright (c) 2015 The Authors, All Rights Reserved.
+    +
+    +
+    +
+    +
+    +
+    +execute 'jboss_reload' do
+    +  command 'sudo /usr/share/jboss-as-7.1.1.Final/bin/jboss-cli.sh --connect command=:reload >dev/null 2>&1 &'
+    +end
+    +
+  * template[/home/vagrant/cheftask/cookbooks/jboss/recipes/install.rb] action create[2015-09-29T14:22:54+00:00] INFO: Processing template[/home/vagrant/cheftask/cookbooks/jboss/recipes/install.rb] action create (testwebapp::create_jbosscookbook line 25)
+[2015-09-29T14:22:54+00:00] INFO: template[/home/vagrant/cheftask/cookbooks/jboss/recipes/install.rb] created file /home/vagrant/cheftask/cookbooks/jboss/recipes/install.rb
+
+    - create new file /home/vagrant/cheftask/cookbooks/jboss/recipes/install.rb[2015-09-29T14:22:54+00:00] INFO: template[/home/vagrant/cheftask/cookbooks/jboss/recipes/install.rb] updated file contents /home/vagrant/cheftask/cookbooks/jboss/recipes/install.rb
+
+    - update content in file /home/vagrant/cheftask/cookbooks/jboss/recipes/install.rb from none to dff581
+    --- /home/vagrant/cheftask/cookbooks/jboss/recipes/install.rb	2015-09-29 14:22:54.310655461 +0000
+    +++ /tmp/chef-rendered-template20150929-4185-3s7o49	2015-09-29 14:22:54.310655461 +0000
+    @@ -1 +1,29 @@
+    +#
+    +# Cookbook Name:: jboss
+    +# Recipe:: install
+    +#
+    +# Copyright (c) 2015 The Authors, All Rights Reserved.
+    +
+    +
+    +Chef::Log.info("Receipe: #{cookbook_name}::#{recipe_name}")
+    +Chef::Log.info('Start Jboss instalation')
+    +Chef::Log.info('Downloading jboss-as-7.1.1.Final.zip ...')
+    +shell_out!("wget http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip")
+    +Chef::Log.info('Unpacking jboss-as-7.1.1.Final.zip ...')
+    +shell_out!("sudo unzip jboss-as-7.1.1.Final.zip -d /usr/share/")
+    +Chef::Log.info('Removing jboss-as-7.1.1.Final.zip ...')
+    +shell_out!("rm jboss-as-7.1.1.Final.zip")
+    +Chef::Log.info('End Jboss instalation')
+    +
+    +Chef::Log.info('Start Jboss setup')
+    +include_recipe 'jboss::setup'
+    +Chef::Log.info('End Jboss setup')
+    +
+    +Chef::Log.info('Start Java instalation')
+    +include_recipe 'java::default'
+    +Chef::Log.info('End Java instalation')
+    +
+    +Chef::Log.info('Start Jboss')
+    +include_recipe 'jboss::start'
+    +
+  * template[/home/vagrant/cheftask/cookbooks/jboss/recipes/setup.rb] action create[2015-09-29T14:22:54+00:00] INFO: Processing template[/home/vagrant/cheftask/cookbooks/jboss/recipes/setup.rb] action create (testwebapp::create_jbosscookbook line 29)
+[2015-09-29T14:22:54+00:00] INFO: template[/home/vagrant/cheftask/cookbooks/jboss/recipes/setup.rb] created file /home/vagrant/cheftask/cookbooks/jboss/recipes/setup.rb
+
+    - create new file /home/vagrant/cheftask/cookbooks/jboss/recipes/setup.rb[2015-09-29T14:22:54+00:00] INFO: template[/home/vagrant/cheftask/cookbooks/jboss/recipes/setup.rb] updated file contents /home/vagrant/cheftask/cookbooks/jboss/recipes/setup.rb
+
+    - update content in file /home/vagrant/cheftask/cookbooks/jboss/recipes/setup.rb from none to 54ea48
+    --- /home/vagrant/cheftask/cookbooks/jboss/recipes/setup.rb	2015-09-29 14:22:54.398619082 +0000
+    +++ /tmp/chef-rendered-template20150929-4185-k11p3m	2015-09-29 14:22:54.398619082 +0000
+    @@ -1 +1,12 @@
+    +#
+    +# Cookbook Name:: jboss
+    +# Recipe:: setup
+    +#
+    +# Copyright (c) 2015 The Authors, All Rights Reserved.
+    +
+    +
+    +Chef::Log.info("Receipe: #{cookbook_name}::#{recipe_name}")
+    +
+    +#do configuration stuff
+    +
+  * template[/home/vagrant/cheftask/cookbooks/jboss/recipes/default.rb] action create[2015-09-29T14:22:54+00:00] INFO: Processing template[/home/vagrant/cheftask/cookbooks/jboss/recipes/default.rb] action create (testwebapp::create_jbosscookbook line 33)
+[2015-09-29T14:22:54+00:00] INFO: template[/home/vagrant/cheftask/cookbooks/jboss/recipes/default.rb] backed up to /home/vagrant/.chef/local-mode-cache/backup/home/vagrant/cheftask/cookbooks/jboss/recipes/default.rb.chef-20150929142254.517649
+[2015-09-29T14:22:54+00:00] INFO: template[/home/vagrant/cheftask/cookbooks/jboss/recipes/default.rb] updated file contents /home/vagrant/cheftask/cookbooks/jboss/recipes/default.rb
+
+    - update content in file /home/vagrant/cheftask/cookbooks/jboss/recipes/default.rb from 22d67b to a02728
+    --- /home/vagrant/cheftask/cookbooks/jboss/recipes/default.rb	2015-09-29 14:22:52.995199236 +0000
+    +++ /tmp/chef-rendered-template20150929-4185-1n9encm	2015-09-29 14:22:54.510572779 +0000
+    @@ -2,8 +2,8 @@
+     # Cookbook Name:: jboss
+     # Recipe:: default
+     #
+    -# Copyright 2015, YOUR_COMPANY_NAME
+    -#
+    -# All rights reserved - Do Not Redistribute
+    -#
+    +# Copyright (c) 2015 The Authors, All Rights Reserved.
+    +
+    +include_recipe 'jboss::install'
+    +
+[2015-09-29T14:22:54+00:00] INFO: Chef Run complete in 6.014684382 seconds
+
+Running handlers:
+[2015-09-29T14:22:54+00:00] INFO: Running report handlers
+Running handlers complete
+[2015-09-29T14:22:54+00:00] INFO: Report handlers complete
+Chef Client finished, 7/7 resources updated in 13.463105985 seconds
+vagrant@precise32:~/cheftask$ 
+
