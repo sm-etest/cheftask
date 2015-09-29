@@ -1,0 +1,13 @@
+#
+# Cookbook Name:: jboss
+# Recipe:: stop
+#
+# Copyright (c) 2015 The Authors, All Rights Reserved
+
+
+
+
+execute 'jboss_stop' do
+  command 'sudo /usr/share/jboss-as-7.1.1.Final/bin/jboss-cli.sh --connect command=:shutdown >dev/null 2>&1 &'
+end
+
