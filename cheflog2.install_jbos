@@ -1,0 +1,146 @@
+vagrant@precise32:~/cheftask$ sudo chef-client --local-mode --runlist 'recipe[testwebapp::install_jbos]'
+[2015-09-29T14:24:38+00:00] INFO: Started chef-zero at chefzero://localhost:8889 with repository at /home/vagrant/cheftask
+  One version per cookbook
+
+[2015-09-29T14:24:38+00:00] INFO: Forking chef instance to converge...
+Starting Chef Client, version 12.4.3
+[2015-09-29T14:24:38+00:00] INFO: *** Chef 12.4.3 ***
+[2015-09-29T14:24:38+00:00] INFO: Chef-client pid: 4383
+[2015-09-29T14:24:42+00:00] INFO: Setting the run_list to [#<Chef::RunList::RunListItem:0x96ba4b4 @version=nil, @type=:recipe, @name="testwebapp::install_jbos">] from CLI options
+[2015-09-29T14:24:42+00:00] INFO: Run List is [recipe[testwebapp::install_jbos]]
+[2015-09-29T14:24:42+00:00] INFO: Run List expands to [testwebapp::install_jbos]
+[2015-09-29T14:24:42+00:00] INFO: Starting Chef Run for vagrant
+[2015-09-29T14:24:42+00:00] INFO: Running start handlers
+[2015-09-29T14:24:42+00:00] INFO: Start handlers complete.
+[2015-09-29T14:24:42+00:00] INFO: HTTP Request Returned 404 Not Found: Object not found: 
+resolving cookbooks for run list: ["testwebapp::install_jbos"]
+[2015-09-29T14:24:43+00:00] INFO: Loading cookbooks [testwebapp@0.1.0, jboss@0.1.0, java@1.35.0]
+Synchronizing Cookbooks:
+[2015-09-29T14:24:43+00:00] INFO: Storing updated cookbooks/jboss/recipes/install.rb in the cache.
+[2015-09-29T14:24:43+00:00] INFO: Storing updated cookbooks/jboss/recipes/default.rb in the cache.
+[2015-09-29T14:24:43+00:00] INFO: Storing updated cookbooks/jboss/recipes/restart.rb in the cache.
+[2015-09-29T14:24:43+00:00] INFO: Storing updated cookbooks/jboss/recipes/start.rb in the cache.
+[2015-09-29T14:24:43+00:00] INFO: Storing updated cookbooks/testwebapp/metadata.rb in the cache.
+[2015-09-29T14:24:43+00:00] INFO: Storing updated cookbooks/jboss/recipes/reload.rb in the cache.
+[2015-09-29T14:24:43+00:00] INFO: Storing updated cookbooks/jboss/metadata.rb in the cache.
+[2015-09-29T14:24:43+00:00] INFO: Storing updated cookbooks/jboss/README.md in the cache.
+[2015-09-29T14:24:43+00:00] INFO: Storing updated cookbooks/jboss/recipes/setup.rb in the cache.
+[2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/resources/ark.rb in the cache.
+  [2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/providers/alternatives.rb in the cache.
+- testwebapp
+[2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/providers/ark.rb in the cache.
+[2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/resources/alternatives.rb in the cache.
+[2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/jboss/recipes/stop.rb in the cache.
+[2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/recipes/windows.rb in the cache.
+[2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/recipes/set_attributes_from_version.rb in the cache.
+[2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/recipes/openjdk.rb in the cache.
+[2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/recipes/default.rb in the cache.
+[2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/recipes/set_java_home.rb in the cache.
+[2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/recipes/purge_packages.rb in the cache.
+  [2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/recipes/ibm_tar.rb in the cache.
+[2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/recipes/oracle_jce.rb in the cache.
+- jboss
+[2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/recipes/oracle_i386.rb in the cache.
+[2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/recipes/default_java_symlink.rb in the cache.
+[2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/recipes/oracle.rb in the cache.
+[2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/recipes/ibm.rb in the cache.
+[2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/recipes/homebrew.rb in the cache.
+[2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/libraries/helpers.rb in the cache.
+[2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/libraries/matchers.rb in the cache.
+[2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/recipes/oracle_rpm.rb in the cache.
+[2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/templates/default/oracle.jinfo.erb in the cache.
+[2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/attributes/default.rb in the cache.
+[2015-09-29T14:24:44+00:00] INFO: Storing updated cookbooks/java/ISSUES.md in the cache.
+[2015-09-29T14:24:45+00:00] INFO: Storing updated cookbooks/java/templates/default/ibm_jdk.installer.properties.erb in the cache.
+[2015-09-29T14:24:45+00:00] INFO: Storing updated cookbooks/java/Gemfile in the cache.
+[2015-09-29T14:24:45+00:00] INFO: Storing updated cookbooks/java/README.md in the cache.
+[2015-09-29T14:24:45+00:00] INFO: Storing updated cookbooks/java/Rakefile in the cache.
+[2015-09-29T14:24:45+00:00] INFO: Storing updated cookbooks/java/metadata.json in the cache.
+[2015-09-29T14:24:45+00:00] INFO: Storing updated cookbooks/java/LICENSE in the cache.
+[2015-09-29T14:24:45+00:00] INFO: Storing updated cookbooks/java/metadata.rb in the cache.
+  - java
+Compiling Cookbooks...
+[2015-09-29T14:24:45+00:00] INFO: Receipe: testwebapp::install_jbos
+[2015-09-29T14:24:45+00:00] INFO: Receipe: jboss::install
+[2015-09-29T14:24:45+00:00] INFO: Start Jboss instalation
+[2015-09-29T14:24:45+00:00] INFO: Downloading jboss-as-7.1.1.Final.zip ...
+[2015-09-29T14:26:34+00:00] INFO: Unpacking jboss-as-7.1.1.Final.zip ...
+[2015-09-29T14:26:56+00:00] INFO: Removing jboss-as-7.1.1.Final.zip ...
+[2015-09-29T14:26:57+00:00] INFO: End Jboss instalation
+[2015-09-29T14:26:57+00:00] INFO: Start Jboss setup
+[2015-09-29T14:26:57+00:00] INFO: Receipe: jboss::setup
+[2015-09-29T14:26:57+00:00] INFO: End Jboss setup
+[2015-09-29T14:26:57+00:00] INFO: Start Java instalation
+[2015-09-29T14:26:57+00:00] INFO: End Java instalation
+[2015-09-29T14:26:57+00:00] INFO: Start Jboss
+Converging 8 resources
+Recipe: java::openjdk
+  * apt_package[openjdk-6-jdk] action install[2015-09-29T14:26:57+00:00] INFO: Processing apt_package[openjdk-6-jdk] action install (java::openjdk line 46)
+[2015-09-29T14:31:53+00:00] INFO: apt_package[openjdk-6-jdk] installed openjdk-6-jdk at 6b36-1.13.8-0ubuntu1~12.04
+
+    - install version 6b36-1.13.8-0ubuntu1~12.04 of package openjdk-6-jdk
+  * apt_package[openjdk-6-jre-headless] action install[2015-09-29T14:31:53+00:00] INFO: Processing apt_package[openjdk-6-jre-headless] action install (java::openjdk line 46)
+ (up to date)
+  * java_alternatives[set-java-alternatives] action set[2015-09-29T14:31:53+00:00] INFO: Processing java_alternatives[set-java-alternatives] action set (java::openjdk line 52)
+
+    - Add alternative for apt
+    - Add alternative for java
+    - Set alternative for java
+    - Add alternative for javaws
+    - Set alternative for javaws
+    - Add alternative for keytool
+    - Set alternative for keytool
+    - Add alternative for orbd
+    - Set alternative for orbd
+    - Add alternative for pack200
+    - Set alternative for pack200
+    - Add alternative for policytool
+    - Set alternative for policytool
+    - Add alternative for rmid
+    - Set alternative for rmid
+    - Add alternative for rmiregistry
+    - Set alternative for rmiregistry
+    - Add alternative for servertool
+    - Set alternative for servertool
+    - Add alternative for tnameserv
+    - Set alternative for tnameserv
+    - Add alternative for unpack200
+    - Set alternative for unpack200
+Recipe: java::default_java_symlink
+  * link[/usr/lib/jvm/default-java] action create[2015-09-29T14:32:19+00:00] INFO: Processing link[/usr/lib/jvm/default-java] action create (java::default_java_symlink line 16)
+[2015-09-29T14:32:19+00:00] INFO: link[/usr/lib/jvm/default-java] created
+
+    - create symlink at /usr/lib/jvm/default-java to /usr/lib/jvm/java-6-openjdk-i386
+Recipe: java::set_java_home
+  * ruby_block[set-env-java-home] action run[2015-09-29T14:32:19+00:00] INFO: Processing ruby_block[set-env-java-home] action run (java::set_java_home line 19)
+[2015-09-29T14:32:19+00:00] INFO: ruby_block[set-env-java-home] called
+
+    - execute the ruby block set-env-java-home
+  * directory[/etc/profile.d] action create[2015-09-29T14:32:19+00:00] INFO: Processing directory[/etc/profile.d] action create (java::set_java_home line 26)
+ (up to date)
+  * file[/etc/profile.d/jdk.sh] action create[2015-09-29T14:32:19+00:00] INFO: Processing file[/etc/profile.d/jdk.sh] action create (java::set_java_home line 30)
+[2015-09-29T14:32:19+00:00] INFO: file[/etc/profile.d/jdk.sh] created file /etc/profile.d/jdk.sh
+
+    - create new file /etc/profile.d/jdk.sh[2015-09-29T14:32:19+00:00] INFO: file[/etc/profile.d/jdk.sh] updated file contents /etc/profile.d/jdk.sh
+
+    - update content in file /etc/profile.d/jdk.sh from none to f7f16e
+    --- /etc/profile.d/jdk.sh	2015-09-29 14:32:19.747756269 +0000
+    +++ /etc/profile.d/.jdk.sh20150929-4383-txoiti	2015-09-29 14:32:19.747756269 +0000
+    @@ -1 +1,2 @@
+    +export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-i386[2015-09-29T14:32:19+00:00] INFO: file[/etc/profile.d/jdk.sh] mode changed to 755
+
+    - change mode from '' to '0755'
+Recipe: jboss::start
+  * execute[jboss_start] action run[2015-09-29T14:32:19+00:00] INFO: Processing execute[jboss_start] action run (jboss::start line 8)
+[2015-09-29T14:32:19+00:00] INFO: execute[jboss_start] ran successfully
+
+    - execute sudo /usr/share/jboss-as-7.1.1.Final/bin/standalone.sh >dev/null 2>&1 &
+[2015-09-29T14:32:20+00:00] INFO: Chef Run complete in 457.701691362 seconds
+
+Running handlers:
+[2015-09-29T14:32:20+00:00] INFO: Running report handlers
+Running handlers complete
+[2015-09-29T14:32:20+00:00] INFO: Report handlers complete
+Chef Client finished, 6/8 resources updated in 462.249511706 seconds
+vagrant@precise32:~/cheftask$ 
+

@@ -1,0 +1,28 @@
+#
+# Cookbook Name:: jboss
+# Recipe:: install
+#
+# Copyright (c) 2015 The Authors, All Rights Reserved.
+
+
+Chef::Log.info("Receipe: #{cookbook_name}::#{recipe_name}")
+Chef::Log.info('Start Jboss instalation')
+Chef::Log.info('Downloading jboss-as-7.1.1.Final.zip ...')
+shell_out!("wget http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip")
+Chef::Log.info('Unpacking jboss-as-7.1.1.Final.zip ...')
+shell_out!("sudo unzip jboss-as-7.1.1.Final.zip -d /usr/share/")
+Chef::Log.info('Removing jboss-as-7.1.1.Final.zip ...')
+shell_out!("rm jboss-as-7.1.1.Final.zip")
+Chef::Log.info('End Jboss instalation')
+
+Chef::Log.info('Start Jboss setup')
+include_recipe 'jboss::setup'
+Chef::Log.info('End Jboss setup')
+
+Chef::Log.info('Start Java instalation')
+include_recipe 'java::default'
+Chef::Log.info('End Java instalation')
+
+Chef::Log.info('Start Jboss')
+include_recipe 'jboss::start'
+

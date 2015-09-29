@@ -1,0 +1,10 @@
+#
+# Cookbook Name:: jboss
+# Recipe:: restart
+#
+# Copyright (c) 2015 The Authors, All Rights Reserved.
+
+
+include_recipe 'jboss::stop'
+include_recipe 'jboss::start'
+

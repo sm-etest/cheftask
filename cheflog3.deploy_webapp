@@ -1,0 +1,37 @@
+vagrant@precise32:~/cheftask$ sudo chef-client --local-mode --runlist 'recipe[testwebapp::deploy_webapp]'
+[2015-09-29T14:34:28+00:00] INFO: Started chef-zero at chefzero://localhost:8889 with repository at /home/vagrant/cheftask
+  One version per cookbook
+
+[2015-09-29T14:34:28+00:00] INFO: Forking chef instance to converge...
+Starting Chef Client, version 12.4.3
+[2015-09-29T14:34:29+00:00] INFO: *** Chef 12.4.3 ***
+[2015-09-29T14:34:29+00:00] INFO: Chef-client pid: 11926
+[2015-09-29T14:34:50+00:00] INFO: Setting the run_list to [#<Chef::RunList::RunListItem:0x963e4cc @version=nil, @type=:recipe, @name="testwebapp::deploy_webapp">] from CLI options
+[2015-09-29T14:34:50+00:00] INFO: Run List is [recipe[testwebapp::deploy_webapp]]
+[2015-09-29T14:34:50+00:00] INFO: Run List expands to [testwebapp::deploy_webapp]
+[2015-09-29T14:34:50+00:00] INFO: Starting Chef Run for vagrant
+[2015-09-29T14:34:50+00:00] INFO: Running start handlers
+[2015-09-29T14:34:50+00:00] INFO: Start handlers complete.
+[2015-09-29T14:34:50+00:00] INFO: HTTP Request Returned 404 Not Found: Object not found: 
+resolving cookbooks for run list: ["testwebapp::deploy_webapp"]
+[2015-09-29T14:34:52+00:00] INFO: Loading cookbooks [testwebapp@0.1.0, jboss@0.1.0, java@1.35.0]
+Synchronizing Cookbooks:
+  - testwebapp
+  - jboss
+  - java
+Compiling Cookbooks...
+[2015-09-29T14:34:54+00:00] INFO: Receipe: testwebapp::deploy_webapp
+[2015-09-29T14:34:54+00:00] INFO: Start  deploying testweb...
+[2015-09-29T14:34:54+00:00] INFO: Downloading testweb.zip ...
+[2015-09-29T14:34:55+00:00] INFO: Unpacking testweb.zip ...
+[2015-09-29T14:34:56+00:00] INFO: Removing testweb.zip ...
+Converging 0 resources
+[2015-09-29T14:34:56+00:00] INFO: Chef Run complete in 6.148724641 seconds
+
+Running handlers:
+[2015-09-29T14:34:56+00:00] INFO: Running report handlers
+Running handlers complete
+[2015-09-29T14:34:56+00:00] INFO: Report handlers complete
+Chef Client finished, 0/0 resources updated in 27.646884216 seconds
+vagrant@precise32:~/cheftask$ 
+

@@ -1,0 +1,37 @@
+vagrant@precise32:~/cheftask$ netstat -lnptu
+(No info could be read for "-p": geteuid()=1000 but you should be root.)
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 127.0.0.1:9999          0.0.0.0:*               LISTEN      -               
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      -               
+tcp        0      0 127.0.0.1:8080          0.0.0.0:*               LISTEN      -               
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -               
+tcp        0      0 0.0.0.0:45721           0.0.0.0:*               LISTEN      -               
+tcp        0      0 127.0.0.1:4447          0.0.0.0:*               LISTEN      -               
+tcp        0      0 127.0.0.1:9990          0.0.0.0:*               LISTEN      -               
+tcp6       0      0 :::111                  :::*                    LISTEN      -               
+tcp6       0      0 :::22                   :::*                    LISTEN      -               
+tcp6       0      0 :::52477                :::*                    LISTEN      -               
+udp        0      0 127.0.0.1:822           0.0.0.0:*                           -               
+udp        0      0 0.0.0.0:68              0.0.0.0:*                           -               
+udp        0      0 0.0.0.0:68              0.0.0.0:*                           -               
+udp        0      0 0.0.0.0:111             0.0.0.0:*                           -               
+udp        0      0 0.0.0.0:41848           0.0.0.0:*                           -               
+udp        0      0 10.0.2.15:123           0.0.0.0:*                           -               
+udp        0      0 127.0.0.1:123           0.0.0.0:*                           -               
+udp        0      0 0.0.0.0:123             0.0.0.0:*                           -               
+udp        0      0 0.0.0.0:635             0.0.0.0:*                           -               
+udp6       0      0 :::50109                :::*                                -               
+udp6       0      0 :::111                  :::*                                -               
+udp6       0      0 ::1:123                 :::*                                -               
+udp6       0      0 fe80::a00:27ff:fe12:123 :::*                                -               
+udp6       0      0 :::123                  :::*                                -               
+udp6       0      0 :::635                  :::*                                -               
+vagrant@precise32:~/cheftask$ curl http://localhost:8080/testweb/
+<html>
+<body>
+<h2>Welcome to Test Web Application !!!!!!!!!!!  </h2>
+</body>
+</html>
+vagrant@precise32:~/cheftask$ 
+
