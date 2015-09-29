@@ -26,7 +26,7 @@ template "#{node['cookbooks_path']}/jboss/recipes/install.rb" do
   source 'default/install.rb.erb'
 end
 
-template "/home/rool/ett/cookbooks/jboss/recipes/setup.rb" do
+template "#{node['cookbooks_path']}/jboss/recipes/setup.rb" do
   source 'default/setup.rb.erb'
 end
 
